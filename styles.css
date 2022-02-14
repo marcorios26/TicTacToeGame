@@ -1,0 +1,363 @@
+@font-face{
+    src: url(fonts/FredokaOne-Regular.ttf);
+    /* src: url(fonts/PlayMeGames-Demo.otf); */
+    font-family: game;
+}
+
+
+
+h1,h2{
+    font-family: game;
+}
+h1{
+    font-size:70px;
+  
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffe600;
+}
+a:hover{
+    color: #ff4d00;
+    transition: 1s ;
+}
+li {
+    list-style: none;
+    font-family: game;
+    color: black;
+}
+button{
+    background: none;
+	color: #00bef8;
+    font-size: 15pt;
+    font-family: game;
+	border: none;
+	padding: 0;
+	
+	cursor: pointer;
+	outline: inherit;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 15%;
+}
+.titleGame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.subtitle{
+    color: #00bef8;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 7%;
+   
+}
+body{
+    background: -webkit-radial-gradient(#560e86,#0a0011);
+}
+.container span{
+    font-size: 80pt;
+    font-weight: bold;
+    position: relative;
+    font-family: game;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.container span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+
+}
+.container span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.container2 span{
+    font-size: 80pt;
+    font-weight: bold;
+    position: relative;
+    font-family: game;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.container2 span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+
+}
+.container2 span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.container3 span{
+    font-size: 80pt;
+    font-weight: bold;
+    position: relative;
+    font-family: game;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.container3 span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+
+}
+.container3 span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+
+.container span:nth-child(1){
+    color: #00bef8;
+}
+.container span:nth-child(2){
+    color: #ff0697;
+}
+.container span:nth-child(3){
+    color: #ff4d00;
+}
+.container2 span:nth-child(1){
+    color: #ffe600;
+}
+.container2 span:nth-child(2){
+    color: #bb00ff;
+}
+.container2 span:nth-child(3){
+    color: #ff4d00;
+}
+.container3 span:nth-child(1){
+    color: #00bef8;
+}
+.container3 span:nth-child(2){
+    color: #ff0697;
+}
+.container3 span:nth-child(3){
+    color: #ff4d00;
+}
+
+
+.flicker{
+    animation: parpadear 1s infinite backwards;
+}
+@keyframes parpadear{
+    to{
+        filter: contrast(250%);
+    }
+}
+
+#winner{
+    color: #ffe600;
+    margin-bottom: 3%;
+}
+#playerX{
+    color: #ff4d00;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+
+}
+#playerO{
+    color: #ffe600;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.record{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:300px;
+    height: 300px;
+    margin-bottom: 3%;
+    }
+.column1{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    height: 33%;
+    flex-basis: 33%;
+}
+
+
+.box0{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid #00bef8;;
+    border-bottom: 3px solid #00bef8;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+    
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.box2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #00bef8 ;
+    border-bottom: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.column2{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    height: 33%;
+    flex-basis: 33%;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+    
+}
+.box3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid #00bef8;
+    border-bottom: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.box4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.box5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #00bef8 ;
+    border-bottom: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+
+.column3{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    height: 33%;
+    flex-basis: 33%;
+
+}
+.box6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-right: 3px solid #00bef8;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.box7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.box8{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #00bef8 ;
+    pointer-events: auto;
+    font-family: game;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
